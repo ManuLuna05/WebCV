@@ -1,23 +1,39 @@
-function scrollToElement(elementSelector, instance = 0) {
-    const elementos = document.querySelectorAll(elementSelector);
-
-    if(elementos.length > instance) {
-        elementos[instance].scrollIntoView({behavior: 'smooth'});
-    }
+// Función para hacer scroll suave a una sección
+function scrollToElementById(id) {
+  const element = document.getElementById(id);
+  if (element) {
+    element.scrollIntoView({ behavior: 'smooth' });
+  }
 }
 
-const link1 = document.getElementById("link1");
-const link2 = document.getElementById("link2");
-const link3 = document.getElementById("link3");
+// Enlaces del menú
+const link1 = document.getElementById("link1"); // Conocimientos
+const link2 = document.getElementById("link2"); // Sobre Mí
+const link3 = document.getElementById("link3"); // Proyectos
 
-link1.addEventListener('click', () => {
-    scrollToElement('.header');
+link1?.addEventListener('click', (e) => {
+  e.preventDefault();
+  scrollToElementById('conocimientos');
 });
 
-link3.addEventListener('click', () => {
-    scrollToElement('.header', 1);
+link2?.addEventListener('click', (e) => {
+  e.preventDefault();
+  scrollToElementById('sobre-mi');
 });
 
-link2.addEventListener('click', () => {
-    scrollToElement('.column');
+link3?.addEventListener('click', (e) => {
+  e.preventDefault();
+  scrollToElementById('proyectos');
+});
+
+// Cambio de tema claro/oscuro
+document.addEventListener("DOMContentLoaded", () => {
+  const toggleBtn = document.getElementById("themeToggle");
+
+  toggleBtn?.addEventListener("click", () => {
+    document.body.classList.toggle("light-theme");
+
+    const isLight = document.body.classList.contains("light-theme");
+    toggleBtn.textContent = isLight ? "Modo Noche" : "Modo Día";
+  });
 });
