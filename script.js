@@ -26,14 +26,18 @@ link3?.addEventListener('click', (e) => {
   scrollToElementById('proyectos');
 });
 
-// Cambio de tema claro/oscuro
-document.addEventListener("DOMContentLoaded", () => {
-  const toggleBtn = document.getElementById("themeToggle");
+const themeToggle = document.getElementById('themeToggle');
+const icon = themeToggle.querySelector('i');
+const body = document.body;
 
-  toggleBtn?.addEventListener("click", () => {
-    document.body.classList.toggle("light-theme");
+themeToggle.addEventListener('click', () => {
+  body.classList.toggle('light-theme');
 
-    const isLight = document.body.classList.contains("light-theme");
-    toggleBtn.textContent = isLight ? "Modo Noche" : "Modo Día";
-  });
+  if (body.classList.contains('light-theme')) {
+    icon.classList.remove('ri-moon-line');
+    icon.classList.add('ri-sun-line');
+  } else {
+    icon.classList.remove('ri-sun-line');
+    icon.classList.add('ri-moon-line');
+  }
 });

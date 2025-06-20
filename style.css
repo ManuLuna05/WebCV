@@ -27,7 +27,21 @@ body.light-theme {
     --color-hover-shadow: rgba(232, 96, 96, 0.3);
 }
 
+.theme-toggle {
+  font-size: 1.7rem;
+  cursor: pointer;
+  color: var(--color-text);
+  transition: color 0.3s ease;
+}
 
+.theme-toggle:hover {
+  color: var(--color-primary);
+}
+
+/* Posicionamiento si lo quieres al final del nav */
+.theme-toggle {
+  margin-left: 1rem;
+}
 
 /* Lógica de logos según el tema */
 .logo-light {
@@ -551,10 +565,6 @@ footer .column > a:hover {
 }
 
 /* FIN SECCIÓN FOOTER */
-
-/* RESPONSIVIDAD */
-
-/* RESPONSIVIDAD */
 
 /* General para tablets y pantallas medianas */
 @media (max-width: 1024px) {
