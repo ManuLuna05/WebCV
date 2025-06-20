@@ -37,6 +37,6 @@ This project was developed using pure HTML, CSS, and JavaScript, and is freely p
 ---
 
 <p align="center">
-  <img src="https://via.placeholder.com/40" alt="icon" width="40" height="40" />
+  <img src="Imagenes/logo_claro.png" alt="icon" width="40" height="40" />
   <span style="vertical-align: middle; margin-left: 10px;">Creado por Manuel Luna Alarcón</span>
 </p>
