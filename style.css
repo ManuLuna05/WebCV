@@ -693,3 +693,304 @@ footer .column > a:hover {
     padding: 2rem 1rem;
   }
 }
+
+/* ESTILOS DEL CARRUSEL - RESPONSIVE */
+
+/* Estilos base del carrusel (desktop) */
+.carousel-container {
+    position: relative;
+    margin-top: 4rem;
+    overflow: hidden;
+    padding: 1rem 0;
+}
+
+.carousel-wrapper {
+    overflow: visible;
+    border-radius: 15px;
+    position: relative;
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-slide {
+    min-width: 100%;
+    display: flex;
+    gap: 2rem;
+    padding: 0 0.5rem;
+}
+
+.project-card {
+    flex: 0 0 calc(33.333% - 1.5rem);
+    min-width: 280px;
+    max-width: calc(33.333% - 1.5rem);
+    padding: 2.5rem 1.5rem;
+    background-color: var(--color-card);
+    display: flex;
+    flex-direction: column;
+    border: 2px solid transparent;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+}
+
+.project-card:hover {
+    background-color: var(--color-card-hover);
+    border-color: var(--color-text);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.project-card .content {
+    flex: 1;
+    margin-bottom: 2rem;
+}
+
+.project-card h4 {
+    margin-bottom: 1rem;
+    color: var(--color-text-alt);
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.project-card h3 {
+    color: var(--color-text);
+    padding-bottom: 1rem;
+    margin-bottom: 2rem;
+    font-size: 1.8rem;
+    font-weight: 600;
+    border-bottom: 2px dashed var(--color-primary);
+}
+
+.project-card p {
+    color: var(--color-text-alt);
+    margin-bottom: 0.75rem;
+    line-height: 1.5;
+}
+
+.project-card p i {
+    color: var(--color-primary);
+    font-size: 1rem;
+    margin-right: 0.5rem;
+}
+
+.project-card .btn {
+    color: var(--color-text);
+    background-color: transparent;
+    border: 2px solid var(--color-primary);
+    border-radius: 8px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.3s ease;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.project-card .btn:hover {
+    background-color: var(--color-primary);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px var(--color-hover-shadow);
+}
+
+.project-card .btn.no-disponible {
+    background-color: #dc2626;
+    border-color: #dc2626;
+    cursor: not-allowed;
+}
+
+.project-card .btn.no-disponible:hover {
+    background-color: #b91c1c;
+    border-color: #b91c1c;
+    transform: none;
+}
+
+/* Tarjetas vacías */
+.project-card--empty {
+    background-color: transparent;
+    border: 2px dashed var(--color-text-alt);
+    opacity: 0.3;
+    cursor: default;
+    pointer-events: none;
+}
+
+.project-card--empty:hover {
+    transform: none;
+    box-shadow: none;
+    border-color: var(--color-text-alt);
+}
+
+/* CONTROLES DEL CARRUSEL */
+.carousel-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.carousel-btn {
+    background-color: var(--color-primary);
+    color: var(--color-text);
+    border: none;
+    padding: 0.75rem;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+}
+
+.carousel-btn:hover {
+    background-color: var(--color-primary-hover);
+    transform: scale(1.1);
+}
+
+.carousel-indicators {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.carousel-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: var(--color-text-alt);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.carousel-dot.active {
+    background-color: var(--color-primary);
+    transform: scale(1.2);
+}
+
+.carousel-info {
+    color: var(--color-text-alt);
+    font-size: 0.9rem;
+    text-align: center;
+    margin-top: 1rem;
+}
+
+/* ==================== RESPONSIVE QUERIES ==================== */
+
+/* Tablets (pantallas medianas) */
+@media (max-width: 1024px) {
+    .carousel-slide {
+        gap: 1.5rem;
+        padding: 0 0.25rem;
+    }
+    
+    .project-card {
+        flex: 0 0 calc(50% - 1rem);
+        max-width: calc(50% - 1rem);
+        min-width: 250px;
+    }
+    
+    .project-card h3 {
+        font-size: 1.5rem;
+    }
+}
+
+/* Móviles y pantallas pequeñas - LAYOUT VERTICAL */
+@media (max-width: 768px) {
+    .carousel-slide {
+        flex-direction: column;
+        gap: 1.5rem;
+        padding: 0 1rem;
+    }
+    
+    .project-card {
+        flex: 0 0 auto;
+        max-width: 100%;
+        min-width: 100%;
+        width: 100%;
+    }
+    
+    .project-card--empty {
+        display: none; /* Ocultar tarjetas vacías en móvil */
+    }
+    
+    .carousel-btn {
+        width: 45px;
+        height: 45px;
+        font-size: 1.1rem;
+    }
+    
+    .carousel-nav {
+        gap: 1.5rem;
+    }
+    
+    .project-card h3 {
+        font-size: 1.4rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .project-card .content {
+        margin-bottom: 1.5rem;
+    }
+    
+    .carousel-info {
+        font-size: 0.85rem;
+    }
+}
+
+/* Móviles muy pequeños */
+@media (max-width: 480px) {
+    .carousel-container {
+        margin-top: 3rem;
+        padding: 0.5rem 0;
+    }
+    
+    .carousel-slide {
+        padding: 0 0.5rem;
+        gap: 1rem;
+    }
+    
+    .project-card {
+        padding: 2rem 1.25rem;
+    }
+    
+    .project-card h4 {
+        font-size: 0.9rem;
+    }
+    
+    .project-card h3 {
+        font-size: 1.3rem;
+        padding-bottom: 0.75rem;
+        margin-bottom: 1.25rem;
+    }
+    
+    .project-card p {
+        font-size: 0.9rem;
+        margin-bottom: 0.6rem;
+    }
+    
+    .project-card .btn {
+        padding: 0.85rem 1.5rem;
+        font-size: 0.95rem;
+    }
+    
+    .carousel-btn {
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
+        padding: 0.6rem;
+    }
+    
+    .carousel-nav {
+        gap: 1rem;
+        margin-top: 1.5rem;
+    }
+    
+    .carousel-dot {
+        width: 10px;
+        height: 10px;
+    }
+}

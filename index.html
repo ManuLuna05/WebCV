@@ -73,33 +73,82 @@
     <p class="sub-header">
       Algunos de los proyectos más representativos que he desarrollado.
     </p>
-    <div class="proyectos">
-      <div class="card">
-        <div class="content">
-          <h4>Marzo 2025 - Junio 2025</h4>
-          <h3>Chapi Escritorio</h3>
-          <p><i class="ri-checkbox-circle-line"></i> Java + MySQL</p>
-          <p><i class="ri-checkbox-circle-line"></i> App de recordatorios para personas mayores creada para mi TFC de DAM.</p>
+    
+    <!-- CARRUSEL DE PROYECTOS -->
+    <div class="carousel-container">
+      <div class="carousel-wrapper">
+        <div class="carousel-track" id="carouselTrack">
+          
+          <!-- Slide 1 - Primeros 3 proyectos -->
+          <div class="carousel-slide">
+            <div class="project-card">
+              <div class="content">
+                <h4>Marzo 2025 - Junio 2025</h4>
+                <h3>Chapi Escritorio</h3>
+                <p><i class="ri-checkbox-circle-line"></i> Java + MySQL</p>
+                <p><i class="ri-checkbox-circle-line"></i> App de recordatorios para personas mayores creada para mi TFC de DAM.</p>
+              </div>
+              <button class="btn" onclick="window.open('https://github.com/ManuLuna05/Chapi-Escritorio', '_blank')">GitHub</button>
+            </div>
+            
+            <div class="project-card">
+              <div class="content">
+                <h4>Abril 2025 - Junio 2025</h4>
+                <h3>Gestor Reuniones</h3>
+                <p><i class="ri-checkbox-circle-line"></i> Flutter/Dart + Firebase</p>
+                <p><i class="ri-checkbox-circle-line"></i> App desarrollada durante mi periodo en prácticas en Plenitas.</p>
+              </div>
+              <button class="btn no-disponible">No Disponible</button>
+            </div>
+            
+            <div class="project-card">
+              <div class="content">
+                <h4>Junio 2025</h4>
+                <h3>Web Portfolio</h3>
+                <p><i class="ri-checkbox-circle-line"></i> HTML, CSS, JS</p>
+                <p><i class="ri-checkbox-circle-line"></i> Web de presentación que se está visualizando ahora mismo.</p>
+              </div>
+              <button class="btn" onclick="window.open('https://github.com/ManuLuna05/WebCV', '_blank')">GitHub</button>
+            </div>
+          </div>
+          
+          <!-- Slide 2 - Próximos proyectos -->
+          <div class="carousel-slide">
+            <div class="project-card">
+              <div class="content">
+                <h4>Agosto 2025 - Septiembre 2025</h4>
+                <h3>Web Occult FC</h3>
+                <p><i class="ri-checkbox-circle-line"></i> PHP, HTML, CSS, JSS + Laravel</p>
+                <p><i class="ri-checkbox-circle-line"></i> Web desarrollada para el Occult FC, haciendo uso del Framework (Laravel) y desplegada en Render.</p>
+              </div>
+              <button class="btn" onclick="window.open('https://occult-wk19.onrender.com', '_blank')">Web Occult FC</button>
+            </div>
+            
+            <!-- Tarjetas vacías para mantener layout -->
+            <div class="project-card project-card--empty"></div>
+            <div class="project-card project-card--empty"></div>
+          </div>
         </div>
-        <button class="btn" onclick="window.open('https://github.com/ManuLuna05/Chapi-Escritorio', '_blank')">GitHub</button>
       </div>
-      <div class="card">
-        <div class="content">
-          <h4>Abril 2025 - Junio 2025</h4>
-          <h3>Gestor Reuniones</h3>
-          <p><i class="ri-checkbox-circle-line"></i> Flutter/Dart + Firebase</p>
-          <p><i class="ri-checkbox-circle-line"></i> App desarrollada durante mi periodo en prácticas en Plenitas.</p>
+      
+      <!-- Controles del carrusel -->
+      <div class="carousel-nav">
+        <button class="carousel-btn" id="prevBtn">
+          <i class="ri-arrow-left-line"></i>
+        </button>
+        
+        <div class="carousel-indicators" id="indicators">
+          <div class="carousel-dot active" data-slide="0"></div>
+          <div class="carousel-dot" data-slide="1"></div>
         </div>
-        <button class="btn no-disponible">No Disponible</button>
+        
+        <button class="carousel-btn" id="nextBtn">
+          <i class="ri-arrow-right-line"></i>
+        </button>
       </div>
-      <div class="card">
-        <div class="content">
-          <h4>Junio 2025</h4>
-          <h3>Web Portfolio</h3>
-          <p><i class="ri-checkbox-circle-line"></i> HTML, CSS, JS</p>
-          <p><i class="ri-checkbox-circle-line"></i> Web de presentación que se está visualizando ahora mismo.</p>
-        </div>
-        <button class="btn" onclick="window.open('https://github.com/ManuLuna05/WebCV', '_blank')">GitHub</button>
+      
+      <div class="carousel-info">
+        <span id="slideInfo">Slide 1 de 2</span>
       </div>
     </div>
   </section>
@@ -115,17 +164,17 @@
             <div class="timeline-item">
             <div class="timeline-icon"><i class="ri-briefcase-line"></i></div>
             <div class="timeline-content">
-                <h4>Prácticas (Midway Technologies)</h4>
-                <p class="fecha">Duración: agosto 2024</p>
-                <p>Durante ese mes, realicé prácticas en Midway Technologies (Sevilla).</p>
+                <h4>Prácticas (Plenitas)</h4>
+                <p class="fecha">Duración: marzo 2025 - junio 2025</p>
+                <p>Realicé mis prácticas del ciclo superior de DAM en Plenitas (Córdoba).</p>
             </div>
             </div>
             <div class="timeline-item">
             <div class="timeline-icon"><i class="ri-briefcase-line"></i></div>
             <div class="timeline-content">
-                <h4>Prácticas (Plenitas)</h4>
-                <p class="fecha">Duración: marzo 2025 - junio 2025</p>
-                <p>Realicé mis prácticas del ciclo superior de DAM en Plenitas (Córdoba).</p>
+              <h4>Prácticas (Midway Technologies)</h4>
+              <p class="fecha">Duración: agosto 2024</p>
+              <p>Durante ese mes, realicé prácticas en Midway Technologies (Sevilla).</p>
             </div>
             </div>
         </div>
