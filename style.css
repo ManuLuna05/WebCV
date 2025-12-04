@@ -61,6 +61,10 @@ body.light-theme .logo-dark {
   display: block;
 }
 
+body.light-theme nav.scrolled {
+    background: rgba(244, 244, 244, 0.8);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
 
 .logo {
   transition: opacity 0.3s ease;
@@ -113,10 +117,35 @@ html {
     scroll-behavior: smooth;
 }
 
+
 nav {
+    width: 100%;
+    padding: 2rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+
+
+nav.scrolled {
+    padding: 1rem;
+    background: rgba(24, 24, 27, 0.8);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+nav .nav-content {
     max-width: 1200px;
-    margin: auto;
-    padding: 2rem 1rem;
+    margin: 0 auto;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -195,7 +224,7 @@ nav {
 
 header {
     position: relative;
-    padding-top: 2rem;
+    padding-top: rem;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     align-items: center;

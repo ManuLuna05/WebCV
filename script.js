@@ -45,6 +45,16 @@ if (themeToggle && icon) {
   });
 }
 
+const nav = document.querySelector('nav');
+
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 50) {
+    nav.classList.add('scrolled');
+  } else {
+    nav.classList.remove('scrolled');
+  }
+});
+
 // Clase para manejar el carrusel de proyectos
 class ProjectCarousel {
   constructor() {
