@@ -68,7 +68,6 @@ body.light-theme nav.scrolled {
 
 .logo {
   transition: opacity 0.3s ease;
-  max-height: 130px;
 }
 
 
@@ -154,7 +153,7 @@ nav .nav-content {
 }
 
 .nav-logo {
-    max-width: 100px;
+    max-width: 70px;
 }
 
 .nav-links {
