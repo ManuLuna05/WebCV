@@ -1,246 +1,427 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" id="htmlLang">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfolio de Manuel Luna Alarcón - Full-Stack Developer">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
   <link rel="stylesheet" href="style.css">
-  <title>CV - Manuel Luna Alarcón</title>
+  <title>Manuel Luna Alarcón | Full-Stack Developer</title>
 </head>
 <body>
-  <nav>
-    <div class="nav-content">
+  <!-- Navegación -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
       <div class="nav-logo">
-        <a href="#">
-          <img src="Imagenes/logo_oscuro.png" alt="Logo Oscuro" class="logo logo-dark">
-          <img src="Imagenes/logo_claro.png" alt="Logo Claro" class="logo logo-light">
+        <a href="#home">
+          <img src="Imagenes/logo_claro.png" alt="Logo" class="logo-img logo-dark">
+          <img src="Imagenes/logo_oscuro.png" alt="Logo" class="logo-img logo-light">
         </a>
       </div>
-      <ul class="nav-links">
-        <li class="link"><a href="#principal">Inicio</a></li>
-        <li class="link"><a href="#conocimientos">Conocimientos</a></li>
-        <li class="link"><a href="#proyectos">Proyectos</a></li>
-        <li class="link"><a href="#sobre-mi">Sobre Mí</a></li>
+      
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="#home" data-lang-es="Inicio" data-lang-en="Home">Inicio</a></li>
+        <li><a href="#about" data-lang-es="Sobre Mí" data-lang-en="About">Sobre Mí</a></li>
+        <li><a href="#skills" data-lang-es="Habilidades" data-lang-en="Skills">Habilidades</a></li>
+        <li><a href="#projects" data-lang-es="Proyectos" data-lang-en="Projects">Proyectos</a></li>
+        <li><a href="#contact" data-lang-es="Contacto" data-lang-en="Contact">Contacto</a></li>
       </ul>
-      <div class="theme-toggle" id="themeToggle" title="Cambiar tema">
-        <i class="ri-moon-line"></i>
+      
+      <div class="nav-controls">
+        <button class="lang-toggle" id="langToggle" aria-label="Change language">
+          <i class="ri-global-line"></i>
+          <span class="lang-text">ES</span>
+        </button>
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+          <i class="ri-moon-line"></i>
+        </button>
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+          <i class="ri-menu-line"></i>
+        </button>
       </div>
     </div>
   </nav>
 
-  <header class="container" id="principal">
-    <div class="content">
-      <span class="blur"></span>
-      <span class="blur"></span>
-      <h4>MANUEL LUNA ALARCÓN</h4>
-      <h1>Hola, soy <span>Manuel</span>, Full-Stack Developer</h1>
-      <p>
-        Soy Manuel Luna Alarcón, Full-Stack Developer. En esta web podrás conocerme mejor y ver algunos de mis proyectos y conocimientos aplicados de forma práctica.
-      </p>
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <div class="hero-container">
+      <div class="hero-content">
+        <div class="hero-text">
+          <span class="hero-greeting" data-lang-es="Hola, soy" data-lang-en="Hi, I'm">Hola, soy</span>
+          <h1 class="hero-name">
+            <span class="name-highlight">Manuel</span>
+            <span class="name-surname">Luna Alarcón</span>
+          </h1>
+          <h2 class="hero-title" data-lang-es="Full-Stack Developer" data-lang-en="Full-Stack Developer">Full-Stack Developer</h2>
+          <p class="hero-description" data-lang-es="Desarrollador apasionado por crear soluciones innovadoras y eficientes. Especializado en desarrollo multiplataforma y tecnologías web modernas." data-lang-en="Passionate developer focused on creating innovative and efficient solutions. Specialized in multiplatform development and modern web technologies.">
+            Desarrollador apasionado por crear soluciones innovadoras y eficientes. Especializado en desarrollo multiplataforma y tecnologías web modernas.
+          </p>
+          <div class="hero-buttons">
+            <a href="#contact" class="btn btn-primary" data-lang-es="Contáctame" data-lang-en="Contact Me">Contáctame</a>
+            <a href="docs/MANUEL_LUNA_ALARCON_CV.pdf" download="CV_Manuel_Luna_Alarcon.pdf" class="btn btn-secondary" data-lang-es="Descargar CV" data-lang-en="Download CV">
+              <i class="ri-download-line"></i>
+              <span data-lang-es="Descargar CV" data-lang-en="Download CV">Descargar CV</span>
+            </a>
+          </div>
+          <div class="hero-social">
+            <a href="https://www.instagram.com/mlual_05/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+              <i class="ri-instagram-line"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/manuel-luna-alarcón-b10779370/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+              <i class="ri-linkedin-line"></i>
+            </a>
+            <a href="https://github.com/ManuLuna05" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+              <i class="ri-github-line"></i>
+            </a>
+          </div>
+        </div>
+        <div class="hero-image">
+          <div class="image-wrapper">
+            <img src="Imagenes/desarrollador_azul.png" alt="Developer" class="dev-img img-dark">
+            <img src="Imagenes/desarrollador_rojo.png" alt="Developer" class="dev-img img-light">
+            <div class="floating-shapes">
+              <div class="shape shape-1"></div>
+              <div class="shape shape-2"></div>
+              <div class="shape shape-3"></div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="image">
-      <img src="Imagenes/desarrollador_azul.png" alt="Desarrollador Azul" class="img-dev img-dark">
-      <img src="Imagenes/desarrollador_rojo.png" alt="Desarrollador Rojo" class="img-dev img-light">
-    </div>
-  </header>
-
-  <section class="container" id="conocimientos">
-    <h2 class="header">MIS CONOCIMIENTOS</h2>
-    <div class="secciones">
-      <div class="card">
-        <span><i class="ri-code-s-slash-line"></i></span>
-        <h4>Lenguajes de Programación</h4>
-        <p>Java, Kotlin, Flutter/Dart, Python, SQL</p>
+    <div class="scroll-indicator">
+      <div class="mouse">
+        <div class="wheel"></div>
       </div>
-      <div class="card">
-        <span><i class="ri-database-2-line"></i></span>
-        <h4>Bases de Datos</h4>
-        <p>MySQL, Oracle, Firebase Firestore</p>
-      </div>
-      <div class="card">
-        <span><i class="ri-git-branch-line"></i></span>
-        <h4>Control de Versiones</h4>
-        <p>Git, GitHub, GitLab</p>
-      </div>
-      <div class="card">
-        <span><i class="ri-tools-line"></i></span>
-        <h4>Otras Tecnologías</h4>
-        <p>HTML, CSS, XML, Google Cloud, Android Studio, Intellij, Visual Studio</p>
+      <div class="arrow">
+        <span></span>
+        <span></span>
+        <span></span>
       </div>
     </div>
   </section>
 
-  <section class="container" id="proyectos">
-    <h2 class="header">PROYECTOS</h2>
-    <p class="sub-header">
-      Algunos de los proyectos más representativos que he desarrollado.
-    </p>
-    
-    <!-- CARRUSEL DE PROYECTOS -->
-    <div class="carousel-container">
-      <div class="carousel-wrapper">
-        <div class="carousel-track" id="carouselTrack">
-          
-          <!-- Slide 1 - Primeros 3 proyectos -->
-          <div class="carousel-slide">
-            <div class="project-card">
-              <div class="content">
-                <h4>Marzo 2025 - Junio 2025</h4>
-                <h3>Chapi Escritorio</h3>
-                <p><i class="ri-checkbox-circle-line"></i> Java + MySQL</p>
-                <p><i class="ri-checkbox-circle-line"></i> App de recordatorios para personas mayores creada para mi TFC de DAM.</p>
+  <!-- About Section -->
+  <section class="about" id="about">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag" data-lang-es="Sobre Mí" data-lang-en="About Me">Sobre Mí</span>
+        <h2 class="section-title" data-lang-es="Conoce más sobre mí" data-lang-en="Get to know me better">Conoce más sobre mí</h2>
+      </div>
+      
+      <div class="about-content">
+        <div class="about-text">
+          <p data-lang-es="Soy Manuel Luna Alarcón, un desarrollador Full-Stack con experiencia en desarrollo de aplicaciones multiplataforma. Me apasiona crear soluciones tecnológicas que mejoren la vida de las personas." data-lang-en="I'm Manuel Luna Alarcón, a Full-Stack developer with experience in multiplatform application development. I'm passionate about creating technological solutions that improve people's lives.">
+            Soy Manuel Luna Alarcón, un desarrollador Full-Stack con experiencia en desarrollo de aplicaciones multiplataforma. Me apasiona crear soluciones tecnológicas que mejoren la vida de las personas.
+          </p>
+        </div>
+        
+        <div class="timeline-section">
+          <h3 class="timeline-title" data-lang-es="Experiencia" data-lang-en="Experience">Experiencia</h3>
+          <div class="timeline">
+            <div class="timeline-item">
+              <div class="timeline-marker"></div>
+              <div class="timeline-content">
+                <h4 data-lang-es="Prácticas - Plenitas" data-lang-en="Internship - Plenitas">Prácticas - Plenitas</h4>
+                <span class="timeline-date" data-lang-es="Marzo 2025 - Junio 2025" data-lang-en="March 2025 - June 2025">Marzo 2025 - Junio 2025</span>
+                <p data-lang-es="Realicé mis prácticas del ciclo superior de DAM en Plenitas (Córdoba), desarrollando aplicaciones móviles con Flutter/Dart y Firebase." data-lang-en="I completed my higher education DAM internship at Plenitas (Córdoba), developing mobile applications with Flutter/Dart and Firebase.">
+                  Realicé mis prácticas del ciclo superior de DAM en Plenitas (Córdoba), desarrollando aplicaciones móviles con Flutter/Dart y Firebase.
+                </p>
               </div>
-              <button class="btn" onclick="window.open('https://github.com/ManuLuna05/Chapi-Escritorio', '_blank')">GitHub</button>
             </div>
-            
-            <div class="project-card">
-              <div class="content">
-                <h4>Abril 2025 - Junio 2025</h4>
-                <h3>Gestor Reuniones</h3>
-                <p><i class="ri-checkbox-circle-line"></i> Flutter/Dart + Firebase</p>
-                <p><i class="ri-checkbox-circle-line"></i> App desarrollada durante mi periodo en prácticas en Plenitas.</p>
+            <div class="timeline-item">
+              <div class="timeline-marker"></div>
+              <div class="timeline-content">
+                <h4 data-lang-es="Prácticas - Midway Technologies" data-lang-en="Internship - Midway Technologies">Prácticas - Midway Technologies</h4>
+                <span class="timeline-date" data-lang-es="Agosto 2024" data-lang-en="August 2024">Agosto 2024</span>
+                <p data-lang-es="Durante ese mes, realicé prácticas en Midway Technologies (Sevilla), adquiriendo experiencia en desarrollo de software empresarial." data-lang-en="During that month, I completed an internship at Midway Technologies (Seville), gaining experience in enterprise software development.">
+                  Durante ese mes, realicé prácticas en Midway Technologies (Sevilla), adquiriendo experiencia en desarrollo de software empresarial.
+                </p>
               </div>
-              <button class="btn no-disponible">No Disponible</button>
-            </div>
-            
-            <div class="project-card">
-              <div class="content">
-                <h4>Junio 2025</h4>
-                <h3>Web Portfolio</h3>
-                <p><i class="ri-checkbox-circle-line"></i> HTML, CSS, JS</p>
-                <p><i class="ri-checkbox-circle-line"></i> Web de presentación que se está visualizando ahora mismo.</p>
-              </div>
-              <button class="btn" onclick="window.open('https://github.com/ManuLuna05/WebCV', '_blank')">GitHub</button>
             </div>
           </div>
           
-          <!-- Slide 2 - Próximos proyectos -->
-          <div class="carousel-slide">
-            <div class="project-card">
-              <div class="content">
-                <h4>Agosto 2025 - Septiembre 2025</h4>
-                <h3>Web Occult FC</h3>
-                <p><i class="ri-checkbox-circle-line"></i> PHP, HTML, CSS, JSS + Laravel</p>
-                <p><i class="ri-checkbox-circle-line"></i> Web desarrollada para el Occult FC, haciendo uso del Framework (Laravel) y desplegada en Render.</p>
+          <h3 class="timeline-title" data-lang-es="Educación" data-lang-en="Education">Educación</h3>
+          <div class="timeline">
+            <div class="timeline-item">
+              <div class="timeline-marker"></div>
+              <div class="timeline-content">
+                <h4 data-lang-es="Estudiando Ingeniería Informática en la UNED" data-lang-en="Studying a Bachelor’s Degree in Computer Engineering (UNED)"> Estudiando Ingeniería Informática en la UNED </h4>
+                <span class="timeline-date" data-lang-es="2025 - Actualidad" data-lang-en="2025 - Present"> 2025 - Actualidad </span>
+                <p data-lang-es="Cursado en la UNED (Universidad Nacional de Educación a Distancia)." data-lang-en="Currently studying at UNED (Spanish National University of Distance Education).">
+                  Cursado en la UNED (Universidad Nacional de Educación a Distancia).
+                </p>
               </div>
-              <button class="btn" onclick="window.open('https://occult-wk19.onrender.com', '_blank')">Web Occult FC</button>
             </div>
-            
-            <!-- Tarjetas vacías para mantener layout -->
-            <div class="project-card project-card--empty"></div>
-            <div class="project-card project-card--empty"></div>
+            <div class="timeline-item">
+              <div class="timeline-marker"></div>
+              <div class="timeline-content">
+                <h4 data-lang-es="Estudiando Especialización en Inteligencia Artificial y Big Data" data-lang-en="Studying an Specialization in Artificial Intelligence and Big Data"> Especialización en Inteligencia Artificial y Big Data</h4>
+                <span class="timeline-date" data-lang-es="2023 - 2025" data-lang-en="2023 - 2025"> 2023 - 2025 </span>
+                <p data-lang-es="Cursando en el IES Gran Capitán (Córdoba)." data-lang-en="Currently studying at IES Gran Capitán (Córdoba, Spain).">
+                  Cursando en el IES Gran Capitán (Córdoba).
+                </p>
+              </div>
+            </div>            
+            <div class="timeline-item">
+              <div class="timeline-marker"></div>
+              <div class="timeline-content">
+                <h4 data-lang-es="Título en Desarrollo de Aplicaciones Multiplataforma" data-lang-en="Degree in Multiplatform Application Development">Título en Desarrollo de Aplicaciones Multiplataforma</h4>
+                <span class="timeline-date" data-lang-es="2023 - 2025" data-lang-en="2023 - 2025">2023 - 2025</span>
+                <p data-lang-es="Cursado en el IES San Francisco de Sales (Córdoba)." data-lang-en="Studied at IES San Francisco de Sales (Córdoba).">
+                  Cursado en el IES San Francisco de Sales (Córdoba).
+                </p>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-marker"></div>
+              <div class="timeline-content">
+                <h4 data-lang-es="Bachillerato Tecnológico" data-lang-en="Technological Baccalaureate">Bachillerato Tecnológico</h4>
+                <span class="timeline-date" data-lang-es="2021 - 2023" data-lang-en="2021 - 2023">2021 - 2023</span>
+                <p data-lang-es="Cursado en el IES Ángel de Saavedra (Córdoba)." data-lang-en="Studied at IES Ángel de Saavedra (Córdoba).">
+                  Cursado en el IES Ángel de Saavedra (Córdoba).
+                </p>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-marker"></div>
+              <div class="timeline-content">
+                <h4 data-lang-es="Diploma de Inglés nivel B2" data-lang-en="English B2 Level Diploma">Diploma de Inglés nivel B2</h4>
+                <span class="timeline-date" data-lang-es="CLC Idiomas (Córdoba)" data-lang-en="CLC Idiomas (Córdoba)">CLC Idiomas (Córdoba)</span>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-      
-      <!-- Controles del carrusel -->
-      <div class="carousel-nav">
-        <button class="carousel-btn" id="prevBtn">
-          <i class="ri-arrow-left-line"></i>
-        </button>
-        
-        <div class="carousel-indicators" id="indicators">
-          <div class="carousel-dot active" data-slide="0"></div>
-          <div class="carousel-dot" data-slide="1"></div>
-        </div>
-        
-        <button class="carousel-btn" id="nextBtn">
-          <i class="ri-arrow-right-line"></i>
-        </button>
-      </div>
-      
-      <div class="carousel-info">
-        <span id="slideInfo">Slide 1 de 2</span>
       </div>
     </div>
   </section>
 
-    <section class="container" id="sobre-mi">
-        <h2 class="header">SOBRE MÍ</h2>
-        <p class="sub-header">
-            Aquí puedes ver un resumen de mi experiencia profesional y formación académica.
+  <!-- Skills Section -->
+  <section class="skills" id="skills">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag" data-lang-es="Habilidades" data-lang-en="Skills">Habilidades</span>
+        <h2 class="section-title" data-lang-es="Tecnologías que domino" data-lang-en="Technologies I master">Tecnologías que domino</h2>
+      </div>
+      
+      <div class="skills-grid">
+        <div class="skill-card">
+          <div class="skill-icon">
+            <i class="ri-code-s-slash-line"></i>
+          </div>
+          <h3 data-lang-es="Lenguajes de Programación" data-lang-en="Programming Languages">Lenguajes de Programación</h3>
+          <p>Java, Kotlin, Flutter/Dart, Python, SQL</p>
+        </div>
+        
+        <div class="skill-card">
+          <div class="skill-icon">
+            <i class="ri-database-2-line"></i>
+          </div>
+          <h3 data-lang-es="Bases de Datos" data-lang-en="Databases">Bases de Datos</h3>
+          <p>MySQL, Oracle, Firebase Firestore</p>
+        </div>
+        
+        <div class="skill-card">
+          <div class="skill-icon">
+            <i class="ri-git-branch-line"></i>
+          </div>
+          <h3 data-lang-es="Control de Versiones" data-lang-en="Version Control">Control de Versiones</h3>
+          <p>Git, GitHub, GitLab</p>
+        </div>
+        
+        <div class="skill-card">
+          <div class="skill-icon">
+            <i class="ri-tools-line"></i>
+          </div>
+          <h3 data-lang-es="Otras Tecnologías" data-lang-en="Other Technologies">Otras Tecnologías</h3>
+          <p>HTML, CSS, XML, Google Cloud, Android Studio, IntelliJ, Visual Studio</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section class="projects" id="projects">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag" data-lang-es="Proyectos" data-lang-en="Projects">Proyectos</span>
+        <h2 class="section-title" data-lang-es="Algunos de mis trabajos" data-lang-en="Some of my work">Algunos de mis trabajos</h2>
+      </div>
+      
+      <div class="projects-grid">
+        <div class="project-card">
+          <div class="project-header">
+            <span class="project-date" data-lang-es="Marzo 2025 - Junio 2025" data-lang-en="March 2025 - June 2025">Marzo 2025 - Junio 2025</span>
+            <h3>Chapi Escritorio</h3>
+          </div>
+          <div class="project-body">
+            <p class="project-tech">Java + MySQL</p>
+            <p class="project-description" data-lang-es="App de recordatorios para personas mayores creada para mi TFC de DAM." data-lang-en="Reminder app for elderly people created for my DAM final project.">
+              App de recordatorios para personas mayores creada para mi TFC de DAM.
+            </p>
+          </div>
+          <div class="project-footer">
+            <a href="https://github.com/ManuLuna05/Chapi-Escritorio" target="_blank" rel="noopener noreferrer" class="project-link">
+              <i class="ri-github-line"></i>
+              <span data-lang-es="Ver en GitHub" data-lang-en="View on GitHub">Ver en GitHub</span>
+            </a>
+          </div>
+        </div>
+        
+        <div class="project-card">
+          <div class="project-header">
+            <span class="project-date" data-lang-es="Abril 2025 - Junio 2025" data-lang-en="April 2025 - June 2025">Abril 2025 - Junio 2025</span>
+            <h3>Gestor Reuniones</h3>
+          </div>
+          <div class="project-body">
+            <p class="project-tech">Flutter/Dart + Firebase</p>
+            <p class="project-description" data-lang-es="App desarrollada durante mi periodo en prácticas en Plenitas." data-lang-en="App developed during my internship period at Plenitas.">
+              App desarrollada durante mi periodo en prácticas en Plenitas.
+            </p>
+          </div>
+          <div class="project-footer">
+            <span class="project-link disabled" data-lang-es="No Disponible" data-lang-en="Not Available">No Disponible</span>
+          </div>
+        </div>
+        
+        <div class="project-card">
+          <div class="project-header">
+            <span class="project-date" data-lang-es="Junio 2025" data-lang-en="June 2025">Junio 2025</span>
+            <h3>Web Portfolio</h3>
+          </div>
+          <div class="project-body">
+            <p class="project-tech">HTML, CSS, JS</p>
+            <p class="project-description" data-lang-es="Web de presentación que se está visualizando ahora mismo." data-lang-en="Presentation website you are currently viewing.">
+              Web de presentación que se está visualizando ahora mismo.
+            </p>
+          </div>
+          <div class="project-footer">
+            <a href="https://github.com/ManuLuna05/WebCV" target="_blank" rel="noopener noreferrer" class="project-link">
+              <i class="ri-github-line"></i>
+              <span data-lang-es="Ver en GitHub" data-lang-en="View on GitHub">Ver en GitHub</span>
+            </a>
+          </div>
+        </div>
+        
+        <div class="project-card">
+          <div class="project-header">
+            <span class="project-date" data-lang-es="Agosto 2025 - Septiembre 2025" data-lang-en="August 2025 - September 2025">Agosto 2025 - Septiembre 2025</span>
+            <h3>Web Occult FC</h3>
+          </div>
+          <div class="project-body">
+            <p class="project-tech">PHP, HTML, CSS, JS + Laravel</p>
+            <p class="project-description" data-lang-es="Web desarrollada para el Occult FC, haciendo uso del Framework (Laravel) y desplegada en Render." data-lang-en="Website developed for Occult FC, using the Laravel framework and deployed on Render.">
+              Web desarrollada para el Occult FC, haciendo uso del Framework (Laravel) y desplegada en Render.
+            </p>
+          </div>
+          <div class="project-footer">
+            <a href="https://occult-wk19.onrender.com" target="_blank" rel="noopener noreferrer" class="project-link">
+              <i class="ri-external-link-line"></i>
+              <span data-lang-es="Ver Web" data-lang-en="View Website">Ver Web</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag" data-lang-es="Contacto" data-lang-en="Contact">Contacto</span>
+        <h2 class="section-title" data-lang-es="Hablemos" data-lang-en="Let's talk">Hablemos</h2>
+      </div>
+      
+      <div class="contact-content">
+        <div class="contact-info">
+          <div class="contact-item">
+            <div class="contact-icon">
+              <i class="ri-phone-line"></i>
+            </div>
+            <div class="contact-details">
+              <h4 data-lang-es="Teléfono" data-lang-en="Phone">Teléfono</h4>
+              <a href="tel:+34674472120">+34 674 472 120</a>
+            </div>
+          </div>
+          
+          <div class="contact-item">
+            <div class="contact-icon">
+              <i class="ri-mail-line"></i>
+            </div>
+            <div class="contact-details">
+              <h4 data-lang-es="Email" data-lang-en="Email">Email</h4>
+              <a href="mailto:lunala.manuel@gmail.com">lunala.manuel@gmail.com</a>
+            </div>
+          </div>
+          
+          <div class="contact-item">
+            <div class="contact-icon">
+              <i class="ri-map-pin-line"></i>
+            </div>
+            <div class="contact-details">
+              <h4 data-lang-es="Ubicación" data-lang-en="Location">Ubicación</h4>
+              <p data-lang-es="Córdoba, España" data-lang-en="Córdoba, Spain">Córdoba, España</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="contact-social">
+          <h4 data-lang-es="Sígueme" data-lang-en="Follow me">Sígueme</h4>
+          <div class="social-links">
+            <a href="https://www.instagram.com/mlual_05/" target="_blank" rel="noopener noreferrer" class="social-link">
+              <i class="ri-instagram-line"></i>
+              <span>Instagram</span>
+            </a>
+            <a href="https://www.linkedin.com/in/manuel-luna-alarcón-b10779370/" target="_blank" rel="noopener noreferrer" class="social-link">
+              <i class="ri-linkedin-line"></i>
+              <span>LinkedIn</span>
+            </a>
+            <a href="https://github.com/ManuLuna05" target="_blank" rel="noopener noreferrer" class="social-link">
+              <i class="ri-github-line"></i>
+              <span>GitHub</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo">
+          <img src="Imagenes/logo_claro.png" alt="Logo" class="logo-img logo-dark">
+          <img src="Imagenes/logo_oscuro.png" alt="Logo" class="logo-img logo-light">
+          <p data-lang-es="Este logotipo representa mis iniciales mostrando así un poco de mi capacidad creativa." data-lang-en="This logo represents my initials, showing a bit of my creative ability.">
+            Este logotipo representa mis iniciales mostrando así un poco de mi capacidad creativa.
+          </p>
+        </div>
+        <div class="footer-links">
+          <h4 data-lang-es="Enlaces rápidos" data-lang-en="Quick Links">Enlaces rápidos</h4>
+          <ul>
+            <li><a href="#home" data-lang-es="Inicio" data-lang-en="Home">Inicio</a></li>
+            <li><a href="#about" data-lang-es="Sobre Mí" data-lang-en="About">Sobre Mí</a></li>
+            <li><a href="#skills" data-lang-es="Habilidades" data-lang-en="Skills">Habilidades</a></li>
+            <li><a href="#projects" data-lang-es="Proyectos" data-lang-en="Projects">Proyectos</a></li>
+            <li><a href="#contact" data-lang-es="Contacto" data-lang-en="Contact">Contacto</a></li>
+          </ul>
+        </div>
+        <div class="footer-download">
+          <h4 data-lang-es="Currículum" data-lang-en="Resume">Currículum</h4>
+          <a href="docs/MANUEL_LUNA_ALARCON_CV.pdf" download="CV_Manuel_Luna_Alarcon.pdf" class="download-btn">
+            <i class="ri-download-line"></i>
+            <span data-lang-es="Descargar CV PDF" data-lang-en="Download CV PDF">Descargar CV PDF</span>
+          </a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p data-lang-es="Copyright © 2025 Manuel Luna Alarcón. Todos los derechos reservados." data-lang-en="Copyright © 2025 Manuel Luna Alarcón. All rights reserved.">
+          Copyright © 2025 Manuel Luna Alarcón. Todos los derechos reservados.
         </p>
-
-        <h3 class="sub-timeline-title">EXPERIENCIA</h3>
-        <div class="timeline">
-            <div class="timeline-item">
-            <div class="timeline-icon"><i class="ri-briefcase-line"></i></div>
-            <div class="timeline-content">
-                <h4>Prácticas (Plenitas)</h4>
-                <p class="fecha">Duración: marzo 2025 - junio 2025</p>
-                <p>Realicé mis prácticas del ciclo superior de DAM en Plenitas (Córdoba).</p>
-            </div>
-            </div>
-            <div class="timeline-item">
-            <div class="timeline-icon"><i class="ri-briefcase-line"></i></div>
-            <div class="timeline-content">
-              <h4>Prácticas (Midway Technologies)</h4>
-              <p class="fecha">Duración: agosto 2024</p>
-              <p>Durante ese mes, realicé prácticas en Midway Technologies (Sevilla).</p>
-            </div>
-            </div>
-        </div>
-
-        <h3 class="sub-timeline-title">EDUCACIÓN</h3>
-        <div class="timeline">
-            <div class="timeline-item">
-            <div class="timeline-icon"><i class="ri-graduation-cap-line"></i></div>
-            <div class="timeline-content">
-                <h4>Título en Desarrollo de Aplicaciones Multiplataforma (2023 - 2025)</h4>
-                <p>Cursado en el IES San Francisco de Sales (Córdoba).</p>
-            </div>
-            </div>
-            <div class="timeline-item">
-            <div class="timeline-icon"><i class="ri-graduation-cap-line"></i></div>
-            <div class="timeline-content">
-                <h4>Bachillerato Tecnológico (2021 - 2023)</h4>
-                <p>Cursado en el IES Ángel de Saavedra (Córdoba).</p>
-            </div>
-            </div>
-            <div class="timeline-item">
-            <div class="timeline-icon"><i class="ri-english-input"></i></div>
-            <div class="timeline-content">
-                <h4>Diploma de Inglés nivel B2</h4>
-                <p>CLC Idiomas (Córdoba)</p>
-            </div>
-            </div>
-        </div>
-    </section>
-
-
-
-  <footer class="container">
-    <span class="blur"></span>
-    <span class="blur"></span>
-    <div class="column">
-      <div class="logo">
-        <img src="Imagenes/logo_oscuro.png" alt="Logo Oscuro" class="logo logo-dark">
-        <img src="Imagenes/logo_claro.png" alt="Logo Claro" class="logo logo-light">
       </div>
-      <p>Este logotipo representa mis iniciales mostrando así un poco de mi capacidad creativa.</p>
-      <div class="sociales">
-        <a href="https://www.instagram.com/mlual_05/" target="_blank"><i class="ri-instagram-line"></i></a>
-        <a href="https://www.linkedin.com/in/manuel-luna-alarcón-b10779370/" target="_blank"><i class="ri-linkedin-line"></i></a>
-      </div>
-    </div>
-    <div class="column">
-      <h4>Contacto</h4>
-      <a>+34 674 472 120</a>
-      <a href="mailto:lunala.manuel@gmail.com@gmail.com">lunala.manuel@gmail.com</a>
-    </div>
-    <div class="column">
-      <h4>Currículum</h4>
-        <a href="docs/MANUEL_LUNA_ALARCON_CV.pdf" download="CV_Manuel_Luna_Alarcon.pdf" target="_blank">Descargar CV PDF</a>
-    </div>
-    <div class="column">
-      <h4>GitHub</h4>
-      <a href="https://github.com/ManuLuna05" target="_blank">Perfil GitHub</a>
     </div>
   </footer>
-
-  <div class="copyright">
-    Copyright © 2025 Manuel Luna Alarcón. Todos los derechos reservados.
-  </div>
 
   <script src="script.js"></script>
 </body>
