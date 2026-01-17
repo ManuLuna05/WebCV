@@ -658,15 +658,19 @@ section {
   border-radius: 16px;
   border: 1px solid var(--border-color);
   text-align: center;
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  animation: fadeInUp 0.8s ease-out;
+
+  transition:
+    transform 0.25s cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 0.25s cubic-bezier(0.4, 0, 0.2, 1),
+    border-color 0s linear,
+    box-shadow 0s linear;
 }
 
 .skill-card:hover {
-  transform: translateY(-10px);
   background: var(--card-hover);
   border-color: var(--accent-primary);
-  box-shadow: var(--shadow-lg);
+  box-shadow: var(--shadow-glow);
+  transform: translateY(-6px);
 }
 
 .skill-icon {
@@ -710,22 +714,25 @@ section {
   gap: 2rem;
 }
 
+/* ==================== PROJECTS: hover instantáneo en borde + glow ==================== */
 .project-card {
   background: var(--card-bg);
   border-radius: 16px;
   border: 1px solid var(--border-color);
   overflow: hidden;
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  display: flex;
-  flex-direction: column;
-  animation: fadeInUp 0.8s ease-out;
+
+  transition:
+    transform 0.25s cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 0.25s cubic-bezier(0.4, 0, 0.2, 1),
+    border-color 0s linear,
+    box-shadow 0s linear;
 }
 
 .project-card:hover {
   transform: translateY(-10px);
   background: var(--card-hover);
   border-color: var(--accent-primary);
-  box-shadow: var(--shadow-lg);
+  box-shadow: var(--shadow-glow);
 }
 
 .project-header {
@@ -1178,5 +1185,37 @@ section {
   
   .hero-image {
     max-width: 300px;
+  }
+}
+
+/* ==================== FIX NAVBAR OFFSET (MÓVIL Y GENERAL) ==================== */
+:root {
+  --nav-h: 132px; /* navbar real aprox: logo 100px + paddings */
+}
+
+body {
+  padding-top: var(--nav-h);
+}
+
+section {
+  scroll-margin-top: var(--nav-h);
+}
+
+@media (max-width: 768px) {
+  :root {
+    --nav-h: 88px; /* navbar más compacta en móvil */
+  }
+
+  .nav-logo img {
+    height: 56px; /* antes 100px -> esto es lo que “infla” el header */
+  }
+
+  .nav-menu {
+    top: var(--nav-h); /* antes 70px */
+  }
+
+  /* como ya compensamos con body padding-top, no necesitas tanto padding aquí */
+  .hero {
+    padding: 3.5rem 1rem 3rem;
   }
 }
