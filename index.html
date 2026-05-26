@@ -1,193 +1,267 @@
 <!DOCTYPE html>
 <html lang="es" id="htmlLang">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Portfolio de Manuel Luna Alarcón - Full-Stack Developer">
+  <meta name="description" content="Portfolio de Manuel Luna Alarcón — Data Analyst & AI Developer">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Syne:wght@400;600;700;800&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
   <link rel="stylesheet" href="style.css">
-  <title>Manuel Luna Alarcón | Full-Stack Developer</title>
+  <title>Manuel Luna Alarcón | Data Analyst & AI Developer</title>
 </head>
+
 <body>
-  <!-- Navegación -->
+
+  <!-- NAVBAR -->
   <nav class="navbar" id="navbar">
-    <div class="nav-container">
-      <div class="nav-logo">
-        <a href="#home">
-          <img src="Imagenes/logo_claro.png" alt="Logo" class="logo-img logo-dark">
-          <img src="Imagenes/logo_oscuro.png" alt="Logo" class="logo-img logo-light">
-        </a>
-      </div>
-      
-      <ul class="nav-menu" id="navMenu">
-        <li><a href="#home" data-lang-es="Inicio" data-lang-en="Home">Inicio</a></li>
-        <li><a href="#about" data-lang-es="Sobre Mí" data-lang-en="About">Sobre Mí</a></li>
-        <li><a href="#skills" data-lang-es="Habilidades" data-lang-en="Skills">Habilidades</a></li>
-        <li><a href="#projects" data-lang-es="Proyectos" data-lang-en="Projects">Proyectos</a></li>
-        <li><a href="#contact" data-lang-es="Contacto" data-lang-en="Contact">Contacto</a></li>
-      </ul>
-      
-      <div class="nav-controls">
-        <button class="lang-toggle" id="langToggle" aria-label="Change language">
-          <i class="ri-global-line"></i>
-          <span class="lang-text">ES</span>
-        </button>
-        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
-          <i class="ri-moon-line"></i>
-        </button>
-        <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
-          <i class="ri-menu-line"></i>
-        </button>
+    <div class="container">
+      <div class="nav-inner">
+        <div class="nav-logo">MLA<span>_dev</span></div>
+
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#home" data-lang-es="Inicio" data-lang-en="Home">Inicio</a></li>
+          <li><a href="#about" data-lang-es="Sobre Mí" data-lang-en="About Me">Sobre Mí</a></li>
+          <li><a href="#skills" data-lang-es="Stack" data-lang-en="Stack">Stack</a></li>
+          <li><a href="#projects" data-lang-es="Proyectos" data-lang-en="Projects">Proyectos</a></li>
+          <li><a href="#contact" data-lang-es="Contacto" data-lang-en="Contact">Contacto</a></li>
+        </ul>
+
+        <div class="nav-controls">
+          <button class="nav-btn lang-btn" id="langToggle">
+            <i class="ri-global-line"></i>
+            <span class="lang-text">ES</span>
+          </button>
+          <button class="nav-btn hamburger" id="hamburger" aria-label="Toggle menu">
+            <i class="ri-menu-3-line"></i>
+          </button>
+        </div>
       </div>
     </div>
   </nav>
 
-  <!-- Hero Section -->
+  <!-- Mobile menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#home" data-lang-es="Inicio" data-lang-en="Home" onclick="closeMobile()">Inicio</a>
+    <a href="#about" data-lang-es="Sobre Mí" data-lang-en="About" onclick="closeMobile()">Sobre Mí</a>
+    <a href="#skills" data-lang-es="Stack" data-lang-en="Stack" onclick="closeMobile()">Stack</a>
+    <a href="#projects" data-lang-es="Proyectos" data-lang-en="Projects" onclick="closeMobile()">Proyectos</a>
+    <a href="#contact" data-lang-es="Contacto" data-lang-en="Contact" onclick="closeMobile()">Contacto</a>
+  </div>
+
+  <!-- HERO -->
   <section class="hero" id="home">
-    <div class="hero-container">
+    <div class="hero-grid"></div>
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+
+    <div class="container">
       <div class="hero-content">
-        <div class="hero-text">
-          <span class="hero-greeting" data-lang-es="Hola, soy" data-lang-en="Hi, I'm">Hola, soy</span>
+        <div class="hero-text fade-up">
+          <div class="hero-tag" data-lang-es="Data Analyst & AI Developer" data-lang-en="Data Analyst & AI Developer">
+            Data Analyst &amp; AI Developer</div>
+
           <h1 class="hero-name">
-            <span class="name-highlight">Manuel</span>
-            <span class="name-surname">Luna Alarcón</span>
+            <span class="name-first">Manuel<br></span>
+            <span class="name-last">Luna Alarcón</span>
           </h1>
-          <h2 class="hero-title" data-lang-es="Full-Stack Developer" data-lang-en="Full-Stack Developer">Full-Stack Developer</h2>
-          <p class="hero-description" data-lang-es="Desarrollador apasionado por crear soluciones innovadoras y eficientes. Especializado en desarrollo multiplataforma y tecnologías web modernas." data-lang-en="Passionate developer focused on creating innovative and efficient solutions. Specialized in multiplatform development and modern web technologies.">
-            Desarrollador apasionado por crear soluciones innovadoras y eficientes. Especializado en desarrollo multiplataforma y tecnologías web modernas.
+
+          <p class="hero-role">
+            <span id="typedRole">python · machine_learning · sql</span><span class="cursor"></span>
           </p>
-          <div class="hero-buttons">
-            <a href="#contact" class="btn btn-primary" data-lang-es="Contáctame" data-lang-en="Contact Me">Contáctame</a>
-            <a href="docs/MANUEL_LUNA_ALARCON_CV.pdf" download="CV_Manuel_Luna_Alarcon.pdf" class="btn btn-secondary" data-lang-es="Descargar CV" data-lang-en="Download CV">
+
+          <p class="hero-desc"
+            data-lang-es="Especializado en análisis de datos, desarrollo de IA y aplicaciones full-stack. Transformo datos en decisiones accionables."
+            data-lang-en="Specialized in data analysis, AI development, and full-stack applications. I turn data into actionable insights.">
+            Especializado en análisis de datos, desarrollo de IA y aplicaciones full-stack. Transformo datos
+            en decisiones accionables.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#contact" class="btn btn-primary" data-lang-es="Hablemos" data-lang-en="Let's talk">Hablemos</a>
+            <a href="docs/MANUEL_LUNA_ALARCON_CV.pdf" download class="btn btn-outline">
               <i class="ri-download-line"></i>
               <span data-lang-es="Descargar CV" data-lang-en="Download CV">Descargar CV</span>
             </a>
           </div>
-          <div class="hero-social">
-            <a href="https://www.instagram.com/mlual_05/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-              <i class="ri-instagram-line"></i>
-            </a>
-            <a href="https://www.linkedin.com/in/manuel-luna-alarcón-b10779370/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+
+          <div class="hero-socials">
+            <a href="https://www.linkedin.com/in/manuel-luna-alarcón-b10779370/" target="_blank" rel="noopener"
+              class="social-icon" aria-label="LinkedIn">
               <i class="ri-linkedin-line"></i>
             </a>
-            <a href="https://github.com/ManuLuna05" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+            <a href="https://github.com/ManuLuna05" target="_blank" rel="noopener" class="social-icon"
+              aria-label="GitHub">
               <i class="ri-github-line"></i>
+            </a>
+            <a href="https://www.instagram.com/mlual_05/" target="_blank" rel="noopener" class="social-icon"
+              aria-label="Instagram">
+              <i class="ri-instagram-line"></i>
             </a>
           </div>
         </div>
-        <div class="hero-image">
-          <div class="image-wrapper">
-            <img src="Imagenes/desarrollador_azul.png" alt="Developer" class="dev-img img-dark">
-            <img src="Imagenes/desarrollador_rojo.png" alt="Developer" class="dev-img img-light">
-            <div class="floating-shapes">
-              <div class="shape shape-1"></div>
-              <div class="shape shape-2"></div>
-              <div class="shape shape-3"></div>
+
+        <!-- Terminal -->
+        <div class="hero-visual fade-up" style="transition-delay:.2s">
+          <div class="terminal">
+            <div class="terminal-bar">
+              <div class="dot dot-r"></div>
+              <div class="dot dot-y"></div>
+              <div class="dot dot-g"></div>
+              <div class="terminal-title">lunala.manuel@gmail.com</div>
+            </div>
+            <div class="terminal-body">
+              <div class="line"><span class="prompt">❯</span><span class="cmd">python analyst.py --profile</span></div>
+              <div class="blank"></div>
+              <div class="output hi"># Loading profile...</div>
+              <div class="blank"></div>
+              <div class="output"><span style="color:var(--text-3)">name</span> : <span style="color:var(--text)">Manuel
+                  Luna Alarcón</span></div>
+              <div class="output"><span style="color:var(--text-3)">role</span> : <span style="color:var(--accent)">Data
+                  Analyst &amp; AI Dev</span></div>
+              <div class="output"><span style="color:var(--text-3)">focus</span> : <span
+                  style="color:var(--blue)">Machine Learning · SQL · Python</span></div>
+              <div class="output"><span style="color:var(--text-3)">location</span>: Córdoba, España</div>
+              <div class="blank"></div>
+              <div class="output hi"># Skills</div>
+              <div class="output">[ Python, SQL, BigData, Flutter, Java ]</div>
+              <div class="blank"></div>
+              <div class="output hi"># Status</div>
+              <div class="output blue">Open to opportunities</div>
+              <div class="blank"></div>
+              <div class="line"><span class="prompt">❯</span><span class="cmd"
+                  style="animation:blink 1s steps(1) infinite">_</span></div>
+            </div>
+          </div>
+
+          <div class="badge-float">
+            <div class="badge-icon"><i class="ri-brain-line"></i></div>
+            <div class="badge-text">
+              <strong data-lang-es="IA & Big Data" data-lang-en="AI & Big Data">IA &amp; Big Data</strong>
+              <span data-lang-es="Especialización completada" data-lang-en="Specialization completed">Especialización
+                completada</span>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <div class="scroll-indicator">
-      <div class="mouse">
-        <div class="wheel"></div>
-      </div>
-      <div class="arrow">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-    </div>
   </section>
 
-  <!-- About Section -->
+  <!-- ABOUT -->
   <section class="about" id="about">
     <div class="container">
-      <div class="section-header">
-        <span class="section-tag" data-lang-es="Sobre Mí" data-lang-en="About Me">Sobre Mí</span>
-        <h2 class="section-title" data-lang-es="Conoce más sobre mí" data-lang-en="Get to know me better">Conoce más sobre mí</h2>
+      <div class="sec-header">
+        <div class="sec-label" data-lang-es="Sobre Mí" data-lang-en="About Me">Sobre Mí</div>
+        <h2 class="sec-title" data-lang-es="Quién soy" data-lang-en="Who I am">Quién soy</h2>
       </div>
-      
-      <div class="about-content">
-        <div class="about-text">
-          <p data-lang-es="Soy Manuel Luna Alarcón, un desarrollador Full-Stack con experiencia en desarrollo de aplicaciones multiplataforma. Me apasiona crear soluciones tecnológicas que mejoren la vida de las personas." data-lang-en="I'm Manuel Luna Alarcón, a Full-Stack developer with experience in multiplatform application development. I'm passionate about creating technological solutions that improve people's lives.">
-            Soy Manuel Luna Alarcón, un desarrollador Full-Stack con experiencia en desarrollo de aplicaciones multiplataforma. Me apasiona crear soluciones tecnológicas que mejoren la vida de las personas.
+
+      <div class="about-grid">
+        <div class="about-left fade-up">
+          <p class="about-intro"
+            data-lang-es="Soy <strong>Manuel Luna Alarcón</strong>, desarrollador full-stack con especialización en <strong>Inteligencia Artificial y Big Data</strong>. Mi enfoque ahora está en el análisis de datos y la construcción de modelos que extraigan valor real de la información."
+            data-lang-en="I'm <strong>Manuel Luna Alarcón</strong>, a full-stack developer specialized in <strong>Artificial Intelligence and Big Data</strong>. My focus is now on data analysis and building models that extract real value from information.">
+            Soy <strong>Manuel Luna Alarcón</strong>, desarrollador full-stack con especialización en
+            <strong>Inteligencia Artificial y Big Data</strong>. Mi enfoque ahora está en el análisis de datos y la
+            construcción de modelos que extraigan valor real de la información.
           </p>
-        </div>
-        
-        <div class="timeline-section">
-          <h3 class="timeline-title" data-lang-es="Experiencia" data-lang-en="Experience">Experiencia</h3>
-          <div class="timeline">
-            <div class="timeline-item">
-              <div class="timeline-marker"></div>
-              <div class="timeline-content">
-                <h4 data-lang-es="Prácticas - Plenitas" data-lang-en="Internship - Plenitas">Prácticas - Plenitas</h4>
-                <span class="timeline-date" data-lang-es="Marzo 2025 - Junio 2025" data-lang-en="March 2025 - June 2025">Marzo 2025 - Junio 2025</span>
-                <p data-lang-es="Realicé mis prácticas del ciclo superior de DAM en Plenitas (Córdoba), desarrollando aplicaciones móviles con Flutter/Dart y Firebase." data-lang-en="I completed my higher education DAM internship at Plenitas (Córdoba), developing mobile applications with Flutter/Dart and Firebase.">
-                  Realicé mis prácticas del ciclo superior de DAM en Plenitas (Córdoba), desarrollando aplicaciones móviles con Flutter/Dart y Firebase.
-                </p>
-              </div>
+
+          <div class="about-stat-row">
+            <div class="stat-box">
+              <div class="num">2+</div>
+              <div class="lbl" data-lang-es="Años programando" data-lang-en="Years coding">Años programando</div>
             </div>
-            <div class="timeline-item">
-              <div class="timeline-marker"></div>
-              <div class="timeline-content">
-                <h4 data-lang-es="Prácticas - Midway Technologies" data-lang-en="Internship - Midway Technologies">Prácticas - Midway Technologies</h4>
-                <span class="timeline-date" data-lang-es="Agosto 2024" data-lang-en="August 2024">Agosto 2024</span>
-                <p data-lang-es="Durante ese mes, realicé prácticas en Midway Technologies (Sevilla), adquiriendo experiencia en desarrollo de software empresarial." data-lang-en="During that month, I completed an internship at Midway Technologies (Seville), gaining experience in enterprise software development.">
-                  Durante ese mes, realicé prácticas en Midway Technologies (Sevilla), adquiriendo experiencia en desarrollo de software empresarial.
-                </p>
+            <div class="stat-box">
+              <div class="num">5+</div>
+              <div class="lbl" data-lang-es="Proyectos" data-lang-en="Projects">Proyectos</div>
+            </div>
+            <div class="stat-box">
+              <div class="num">B2</div>
+              <div class="lbl" data-lang-es="Inglés" data-lang-en="English">Inglés</div>
+            </div>
+            <div class="stat-box">
+              <div class="num">∞</div>
+              <div class="lbl" data-lang-es="Curiosidad" data-lang-en="Curiosity">Curiosidad</div>
+            </div>
+          </div>
+
+          <!-- Languages -->
+          <div style="margin-top:2rem">
+            <div class="timeline-block-title" data-lang-es="Idiomas" data-lang-en="Languages">Idiomas</div>
+            <div class="lang-row">
+              <div class="lang-item">
+                <span class="lang-name" data-lang-es="Español" data-lang-en="Spanish">Español</span>
+                <span class="lang-lvl">Nativo</span>
+              </div>
+              <div class="lang-item">
+                <span class="lang-name" data-lang-es="Inglés" data-lang-en="English">Inglés</span>
+                <span class="lang-lvl">B2 — Avanzado</span>
+              </div>
+              <div class="lang-item">
+                <span class="lang-name" data-lang-es="Francés" data-lang-en="French">Francés</span>
+                <span class="lang-lvl">Básico</span>
               </div>
             </div>
           </div>
-          
-          <h3 class="timeline-title" data-lang-es="Educación" data-lang-en="Education">Educación</h3>
-          <div class="timeline">
-            <div class="timeline-item">
-              <div class="timeline-marker"></div>
-              <div class="timeline-content">
-                <h4 data-lang-es="Estudiando Ingeniería Informática en la UNED" data-lang-en="Studying Computer Engineering at (UNED)"> Estudiando Ingeniería Informática en la UNED </h4>
-                <span class="timeline-date" data-lang-es="2025 - Actualidad" data-lang-en="2025 - Present"> 2025 - Actualidad </span>
-                <p data-lang-es="Cursado en la UNED (Universidad Nacional de Educación a Distancia)." data-lang-en="Currently studying at UNED (Spanish National University of Distance Education).">
-                  Cursado en la UNED (Universidad Nacional de Educación a Distancia).
-                </p>
-              </div>
+        </div>
+
+        <div class="about-right fade-up" style="transition-delay:.15s">
+          <!-- Experience -->
+          <div class="timeline-block">
+            <div class="timeline-block-title" data-lang-es="Experiencia" data-lang-en="Experience">Experiencia</div>
+            <div class="tl-item">
+              <div class="tl-date" data-lang-es="Marzo 2025 – Junio 2025" data-lang-en="March 2025 – June 2025">Marzo
+                2025 – Junio 2025</div>
+              <div class="tl-title" data-lang-es="Prácticas — Plenitas (Córdoba)"
+                data-lang-en="Internship — Plenitas (Córdoba)">Prácticas — Plenitas (Córdoba)</div>
+              <div class="tl-desc"
+                data-lang-es="Desarrollo de aplicaciones móviles con Flutter/Dart y Firebase en prácticas del ciclo DAM."
+                data-lang-en="Mobile app development with Flutter/Dart and Firebase during DAM internship.">Desarrollo
+                de aplicaciones móviles con Flutter/Dart y Firebase en prácticas del ciclo DAM.</div>
             </div>
-            <div class="timeline-item">
-              <div class="timeline-marker"></div>
-              <div class="timeline-content">
-                <h4 data-lang-es="Estudiando Especialización en Inteligencia Artificial y Big Data" data-lang-en="Studying an Specialization in Artificial Intelligence and Big Data"> Especialización en Inteligencia Artificial y Big Data</h4>
-                <span class="timeline-date" data-lang-es="2023 - 2025" data-lang-en="2023 - 2025"> 2023 - 2025 </span>
-                <p data-lang-es="Cursando en el IES Gran Capitán (Córdoba)." data-lang-en="Currently studying at IES Gran Capitán (Córdoba, Spain).">
-                  Cursando en el IES Gran Capitán (Córdoba).
-                </p>
+            <div class="tl-item">
+              <div class="tl-date" data-lang-es="Agosto 2024" data-lang-en="August 2024">Agosto 2024</div>
+              <div class="tl-title" data-lang-es="Prácticas — Midway Technologies (Sevilla)"
+                data-lang-en="Internship — Midway Technologies (Seville)">Prácticas — Midway Technologies (Sevilla)
               </div>
-            </div>            
-            <div class="timeline-item">
-              <div class="timeline-marker"></div>
-              <div class="timeline-content">
-                <h4 data-lang-es="Título en Desarrollo de Aplicaciones Multiplataforma" data-lang-en="Degree in Multiplatform Application Development">Título en Desarrollo de Aplicaciones Multiplataforma</h4>
-                <span class="timeline-date" data-lang-es="2023 - 2025" data-lang-en="2023 - 2025">2023 - 2025</span>
-                <p data-lang-es="Cursado en el IES San Francisco de Sales (Córdoba)." data-lang-en="Studied at IES San Francisco de Sales (Córdoba).">
-                  Cursado en el IES San Francisco de Sales (Córdoba).
-                </p>
-              </div>
+              <div class="tl-desc" data-lang-es="Experiencia en desarrollo de software empresarial."
+                data-lang-en="Experience in enterprise software development.">Experiencia en desarrollo de software
+                empresarial.</div>
             </div>
-            <div class="timeline-item">
-              <div class="timeline-marker"></div>
-              <div class="timeline-content">
-                <h4 data-lang-es="Bachillerato Tecnológico" data-lang-en="Upper Secondary Education – Technological Track">Bachillerato Tecnológico</h4>
-                <span class="timeline-date" data-lang-es="2021 - 2023" data-lang-en="2021 - 2023">2021 - 2023</span>
-                <p data-lang-es="Cursado en el IES Ángel de Saavedra (Córdoba)." data-lang-en="Studied at IES Ángel de Saavedra (Córdoba).">
-                  Cursado en el IES Ángel de Saavedra (Córdoba).
-                </p>
+          </div>
+
+          <!-- Education -->
+          <div class="timeline-block">
+            <div class="timeline-block-title" data-lang-es="Formación" data-lang-en="Education">Formación</div>
+            <div class="tl-item">
+              <div class="tl-date" data-lang-es="2025 – Actualidad" data-lang-en="2025 – Present">2025 – Actualidad
               </div>
+              <div class="tl-title" data-lang-es="Ingeniería Informática — UNED"
+                data-lang-en="Computer Engineering — UNED">Ingeniería Informática — UNED</div>
             </div>
-            <div class="timeline-item">
-              <div class="timeline-marker"></div>
-              <div class="timeline-content">
-                <h4 data-lang-es="Diploma de Inglés nivel B2" data-lang-en="English B2 Level Diploma">Diploma de Inglés nivel B2</h4>
-                <span class="timeline-date" data-lang-es="CLC Idiomas (Córdoba)" data-lang-en="CLC Idiomas (Córdoba)">CLC Idiomas (Córdoba)</span>
+            <div class="tl-item">
+              <div class="tl-date" data-lang-es="2025 – Actualidad" data-lang-en="2025 – Present">2025 – Actualidad
               </div>
+              <div class="tl-title" data-lang-es="Grado Especialización IA & Big Data — IES Gran Capitán"
+                data-lang-en="AI & Big Data Specialization — IES Gran Capitán">Grado Especialización IA &amp; Big Data —
+                IES Gran Capitán</div>
+            </div>
+            <div class="tl-item">
+              <div class="tl-date" data-lang-es="2023 – 2025" data-lang-en="2023 – 2025">2023 – 2025</div>
+              <div class="tl-title" data-lang-es="DAM — IES San Francisco de Sales"
+                data-lang-en="DAM — IES San Francisco de Sales">DAM — IES San Francisco de Sales</div>
+              <div class="tl-desc" data-lang-es="Título en Desarrollo de Aplicaciones Multiplataforma."
+                data-lang-en="Degree in Multiplatform Application Development.">Título en Desarrollo de Aplicaciones
+                Multiplataforma.</div>
+            </div>
+            <div class="tl-item">
+              <div class="tl-date" data-lang-es="2021 – 2023" data-lang-en="2021 – 2023">2021 – 2023</div>
+              <div class="tl-title" data-lang-es="Bachillerato Tecnológico — IES Ángel de Saavedra"
+                data-lang-en="Technological Baccalaureate — IES Ángel de Saavedra">Bachillerato Tecnológico — IES Ángel
+                de Saavedra</div>
             </div>
           </div>
         </div>
@@ -195,234 +269,245 @@
     </div>
   </section>
 
-  <!-- Skills Section -->
-  <section class="skills" id="skills">
+  <!-- SKILLS -->
+  <section class="skills-section" id="skills">
     <div class="container">
-      <div class="section-header">
-        <span class="section-tag" data-lang-es="Habilidades" data-lang-en="Skills">Habilidades</span>
-        <h2 class="section-title" data-lang-es="Tecnologías que domino" data-lang-en="Technologies I master">Tecnologías que domino</h2>
+      <div class="sec-header">
+        <div class="sec-label" data-lang-es="Tecnologías" data-lang-en="Technologies">Tecnologías</div>
+        <h2 class="sec-title" data-lang-es="Mi stack técnico" data-lang-en="My tech stack">Mi stack técnico</h2>
       </div>
-      
-      <div class="skills-grid">
-        <div class="skill-card">
-          <div class="skill-icon">
-            <i class="ri-code-s-slash-line"></i>
+
+      <div class="skills-wrapper">
+        <div class="skill-group fade-up">
+          <div class="sg-icon"><i class="ri-bar-chart-2-line"></i></div>
+          <div class="sg-title" data-lang-es="Data & IA" data-lang-en="Data & AI">Data &amp; IA</div>
+          <div class="skill-tags">
+            <span class="tag accent">Python</span>
+            <span class="tag accent">Machine Learning</span>
+            <span class="tag accent">Big Data</span>
+            <span class="tag">Pandas</span>
+            <span class="tag">NumPy</span>
+            <span class="tag">Scikit-learn</span>
           </div>
-          <h3 data-lang-es="Lenguajes de Programación" data-lang-en="Programming Languages">Lenguajes de Programación</h3>
-          <p>Java, Kotlin, Flutter/Dart, Python, SQL</p>
         </div>
-        
-        <div class="skill-card">
-          <div class="skill-icon">
-            <i class="ri-database-2-line"></i>
+
+        <div class="skill-group fade-up" style="transition-delay:.05s">
+          <div class="sg-icon"><i class="ri-database-2-line"></i></div>
+          <div class="sg-title" data-lang-es="Bases de Datos" data-lang-en="Databases">Bases de Datos</div>
+          <div class="skill-tags">
+            <span class="tag accent">SQL</span>
+            <span class="tag accent">MySQL</span>
+            <span class="tag">MongoDB</span>
+            <span class="tag">PostgreSQL</span>
           </div>
-          <h3 data-lang-es="Bases de Datos" data-lang-en="Databases">Bases de Datos</h3>
-          <p>MySQL, Oracle, Firebase Firestore</p>
         </div>
-        
-        <div class="skill-card">
-          <div class="skill-icon">
-            <i class="ri-git-branch-line"></i>
+
+        <div class="skill-group fade-up" style="transition-delay:.1s">
+          <div class="sg-icon"><i class="ri-code-s-slash-line"></i></div>
+          <div class="sg-title" data-lang-es="Backend & Apps" data-lang-en="Backend & Apps">Backend &amp; Apps</div>
+          <div class="skill-tags">
+            <span class="tag accent">Java</span>
+            <span class="tag">Kotlin</span>
+            <span class="tag">Flutter/Dart</span>
+            <span class="tag">PHP</span>
+            <span class="tag">Laravel</span>
           </div>
-          <h3 data-lang-es="Control de Versiones" data-lang-en="Version Control">Control de Versiones</h3>
-          <p>Git, GitHub, GitLab</p>
         </div>
-        
-        <div class="skill-card">
-          <div class="skill-icon">
-            <i class="ri-tools-line"></i>
+
+        <div class="skill-group fade-up" style="transition-delay:.15s">
+          <div class="sg-icon"><i class="ri-layout-line"></i></div>
+          <div class="sg-title" data-lang-es="Frontend" data-lang-en="Frontend">Frontend</div>
+          <div class="skill-tags">
+            <span class="tag accent">HTML</span>
+            <span class="tag accent">CSS</span>
+            <span class="tag accent">JavaScript</span>
+            <span class="tag">XML</span>
           </div>
-          <h3 data-lang-es="Otras Tecnologías" data-lang-en="Other Technologies">Otras Tecnologías</h3>
-          <p>HTML, CSS, XML, Google Cloud, Android Studio, IntelliJ, Visual Studio</p>
+        </div>
+
+        <div class="skill-group fade-up" style="transition-delay:.2s">
+          <div class="sg-icon"><i class="ri-git-branch-line"></i></div>
+          <div class="sg-title" data-lang-es="DevOps & Cloud" data-lang-en="DevOps & Cloud">DevOps &amp; Cloud</div>
+          <div class="skill-tags">
+            <span class="tag">Git</span>
+            <span class="tag accent">GitHub</span>
+            <span class="tag">GitLab</span>
+            <span class="tag">Google Cloud</span>
+            <span class="tag accent">Render</span>
+          </div>
+        </div>
+
+        <div class="skill-group fade-up" style="transition-delay:.25s">
+          <div class="sg-icon"><i class="ri-tools-line"></i></div>
+          <div class="sg-title" data-lang-es="Entornos & Herramientas" data-lang-en="Tools & IDEs">Entornos &amp;
+            Herramientas</div>
+          <div class="skill-tags">
+            <span class="tag">Android Studio</span>
+            <span class="tag accent">IntelliJ IDEA</span>
+            <span class="tag accent">VS Code</span>
+            <span class="tag">Jupyter</span>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Projects Section -->
-  <section class="projects" id="projects">
+  <!-- PROJECTS -->
+  <section class="projects-section" id="projects">
     <div class="container">
-      <div class="section-header">
-        <span class="section-tag" data-lang-es="Proyectos" data-lang-en="Projects">Proyectos</span>
-        <h2 class="section-title" data-lang-es="Algunos de mis trabajos" data-lang-en="Some of my work">Algunos de mis trabajos</h2>
+      <div class="sec-header">
+        <div class="sec-label" data-lang-es="Proyectos" data-lang-en="Projects">Proyectos</div>
+        <h2 class="sec-title" data-lang-es="Trabajos destacados" data-lang-en="Featured work">Trabajos destacados</h2>
       </div>
-      
-      <div class="projects-grid">
-        <div class="project-card">
-          <div class="project-header">
-            <span class="project-date" data-lang-es="Marzo 2025 - Junio 2025" data-lang-en="March 2025 - June 2025">Marzo 2025 - Junio 2025</span>
-            <h3>Chapi Escritorio</h3>
-          </div>
-          <div class="project-body">
-            <p class="project-tech">Java + MySQL</p>
-            <p class="project-description" data-lang-es="App de recordatorios para personas mayores creada para mi TFC de DAM." data-lang-en="Reminder app for elderly people created for my DAM final project.">
-              App de recordatorios para personas mayores creada para mi TFC de DAM.
-            </p>
-          </div>
-          <div class="project-footer">
-            <a href="https://github.com/ManuLuna05/Chapi-Escritorio" target="_blank" rel="noopener noreferrer" class="project-link">
-              <i class="ri-github-line"></i>
-              <span data-lang-es="Ver en GitHub" data-lang-en="View on GitHub">Ver en GitHub</span>
-            </a>
-          </div>
-        </div>
-        
-        <div class="project-card">
-          <div class="project-header">
-            <span class="project-date" data-lang-es="Abril 2025 - Junio 2025" data-lang-en="April 2025 - June 2025">Abril 2025 - Junio 2025</span>
-            <h3>Gestor Reuniones</h3>
-          </div>
-          <div class="project-body">
-            <p class="project-tech">Flutter/Dart + Firebase</p>
-            <p class="project-description" data-lang-es="App desarrollada durante mi periodo en prácticas en Plenitas." data-lang-en="App developed during my internship period at Plenitas.">
-              App desarrollada durante mi periodo en prácticas en Plenitas.
-            </p>
-          </div>
-          <div class="project-footer">
-            <span class="project-link disabled" data-lang-es="No Disponible" data-lang-en="Not Available">No Disponible</span>
-          </div>
-        </div>
-        
-        <div class="project-card">
-          <div class="project-header">
-            <span class="project-date" data-lang-es="Junio 2025" data-lang-en="June 2025">Junio 2025</span>
-            <h3>Web Portfolio</h3>
-          </div>
-          <div class="project-body">
-            <p class="project-tech">HTML, CSS, JS</p>
-            <p class="project-description" data-lang-es="Web de presentación que se está visualizando ahora mismo." data-lang-en="Presentation website you are currently viewing.">
-              Web de presentación que se está visualizando ahora mismo.
-            </p>
-          </div>
-          <div class="project-footer">
-            <a href="https://github.com/ManuLuna05/WebCV" target="_blank" rel="noopener noreferrer" class="project-link">
-              <i class="ri-github-line"></i>
-              <span data-lang-es="Ver en GitHub" data-lang-en="View on GitHub">Ver en GitHub</span>
-            </a>
-          </div>
-        </div>
-        
-        <div class="project-card">
-          <div class="project-header">
-            <span class="project-date" data-lang-es="Agosto 2025 - Septiembre 2025" data-lang-en="August 2025 - September 2025">Agosto 2025 - Septiembre 2025</span>
-            <h3>Web Occult FC</h3>
-          </div>
-          <div class="project-body">
-            <p class="project-tech">PHP, HTML, CSS, JS + Laravel</p>
-            <p class="project-description" data-lang-es="Web desarrollada para el Occult FC, haciendo uso del Framework (Laravel) y desplegada en Render." data-lang-en="Website developed for Occult FC, using the Laravel framework and deployed on Render.">
-              Web desarrollada para el Occult FC, haciendo uso del Framework (Laravel) y desplegada en Render.
-            </p>
-          </div>
-          <div class="project-footer">
-            <a href="https://occult-wk19.onrender.com" target="_blank" rel="noopener noreferrer" class="project-link">
-              <i class="ri-external-link-line"></i>
-              <span data-lang-es="Ver Web" data-lang-en="View Website">Ver Web</span>
-            </a>
-          </div>
-        </div>
+
+      <!-- Filter tabs -->
+      <div class="proj-filters" id="projFilters">
+        <button class="proj-filter-btn active" data-filter="all" data-lang-es="Todos" data-lang-en="All">Todos</button>
+        <button class="proj-filter-btn" data-filter="data" data-lang-es="Data & IA" data-lang-en="Data & AI">Data &amp;
+          IA</button>
+        <button class="proj-filter-btn" data-filter="mobile" data-lang-es="Mobile" data-lang-en="Mobile">Mobile</button>
+        <button class="proj-filter-btn" data-filter="web" data-lang-es="Web" data-lang-en="Web">Web</button>
+        <button class="proj-filter-btn" data-filter="desktop" data-lang-es="Escritorio"
+          data-lang-en="Desktop">Escritorio</button>
+      </div>
+
+      <!-- Projects grid — rendered by JS -->
+      <div class="projects-grid" id="projectsGrid"></div>
+
+      <!-- Show more button -->
+      <div class="proj-more-wrap" id="projMoreWrap">
+        <button class="proj-more-btn" id="projMoreBtn">
+          <span class="proj-more-label" data-lang-es="Ver más proyectos" data-lang-en="Show more projects">Ver más
+            proyectos</span>
+          <i class="ri-arrow-down-s-line"></i>
+        </button>
       </div>
     </div>
   </section>
 
-  <!-- Contact Section -->
-  <section class="contact" id="contact">
+  <!-- CONTACT -->
+  <section class="contact-section" id="contact">
     <div class="container">
-      <div class="section-header">
-        <span class="section-tag" data-lang-es="Contacto" data-lang-en="Contact">Contacto</span>
-        <h2 class="section-title" data-lang-es="Hablemos" data-lang-en="Let's talk">Hablemos</h2>
+      <div class="sec-header">
+        <div class="sec-label" data-lang-es="Contacto" data-lang-en="Contact">Contacto</div>
+        <h2 class="sec-title" data-lang-es="Hablemos" data-lang-en="Let's talk">Hablemos</h2>
       </div>
-      
-      <div class="contact-content">
-        <div class="contact-info">
-          <div class="contact-item">
-            <div class="contact-icon">
-              <i class="ri-phone-line"></i>
+
+      <div class="contact-grid">
+        <div class="fade-up">
+          <p class="contact-desc"
+            data-lang-es="Estoy abierto a oportunidades en análisis de datos, ingeniería de datos o desarrollo de IA, además de oportunidades en desarrollo de software entre otras. Si tienes un proyecto interesante o una oferta, escríbeme."
+            data-lang-en="I'm open to opportunities in data analysis, data engineering, or AI development, as well as opportunities in software development. If you have an interesting project or offer, reach out.">
+            Estoy abierto a oportunidades en análisis de datos, ingeniería de datos o desarrollo de IA. Si tienes un
+            proyecto interesante o una oferta, escríbeme.
+          </p>
+
+          <div class="contact-items">
+            <div class="contact-row">
+              <div class="ci-icon"><i class="ri-mail-send-line"></i></div>
+              <div class="ci-text">
+                <div class="ci-label">Email</div>
+                <div class="ci-value"><a href="mailto:lunala.manuel@gmail.com">lunala.manuel@gmail.com</a></div>
+              </div>
             </div>
-            <div class="contact-details">
-              <h4 data-lang-es="Teléfono" data-lang-en="Phone">Teléfono</h4>
-              <a href="tel:+34674472120">+34 674 472 120</a>
+            <div class="contact-row">
+              <div class="ci-icon"><i class="ri-phone-line"></i></div>
+              <div class="ci-text">
+                <div class="ci-label" data-lang-es="Teléfono" data-lang-en="Phone">Teléfono</div>
+                <div class="ci-value"><a href="tel:+34674472120">+34 674 472 120</a></div>
+              </div>
+            </div>
+            <div class="contact-row">
+              <div class="ci-icon"><i class="ri-map-pin-2-line"></i></div>
+              <div class="ci-text">
+                <div class="ci-label" data-lang-es="Ubicación" data-lang-en="Location">Ubicación</div>
+                <div class="ci-value" data-lang-es="Córdoba, España" data-lang-en="Córdoba, Spain">Córdoba, España</div>
+              </div>
             </div>
           </div>
-          
-          <div class="contact-item">
-            <div class="contact-icon">
-              <i class="ri-mail-line"></i>
-            </div>
-            <div class="contact-details">
-              <h4 data-lang-es="Email" data-lang-en="Email">Email</h4>
-              <a href="mailto:lunala.manuel@gmail.com">lunala.manuel@gmail.com</a>
-            </div>
-          </div>
-          
-          <div class="contact-item">
-            <div class="contact-icon">
-              <i class="ri-map-pin-line"></i>
-            </div>
-            <div class="contact-details">
-              <h4 data-lang-es="Ubicación" data-lang-en="Location">Ubicación</h4>
-              <p data-lang-es="Córdoba, España" data-lang-en="Córdoba, Spain">Córdoba, España</p>
-            </div>
+
+          <div class="social-grid" style="margin-top:2rem">
+            <a href="https://www.linkedin.com/in/manuel-luna-alarcón-b10779370/" target="_blank" rel="noopener"
+              class="social-card">
+              <i class="ri-linkedin-line sc-icon"></i>
+              <div>
+                <div class="sc-name">LinkedIn</div>
+                <div class="sc-handle">Manuel Luna Alarcón</div>
+              </div>
+            </a>
+            <a href="https://github.com/ManuLuna05" target="_blank" rel="noopener" class="social-card">
+              <i class="ri-github-line sc-icon"></i>
+              <div>
+                <div class="sc-name">GitHub</div>
+                <div class="sc-handle">@ManuLuna05</div>
+              </div>
+            </a>
+            <a href="https://www.instagram.com/mlual_05/" target="_blank" rel="noopener" class="social-card">
+              <i class="ri-instagram-line sc-icon"></i>
+              <div>
+                <div class="sc-name">Instagram</div>
+                <div class="sc-handle">@mlual_05</div>
+              </div>
+            </a>
           </div>
         </div>
-        
-        <div class="contact-social">
-          <h4 data-lang-es="Sígueme" data-lang-en="Follow me">Sígueme</h4>
-          <div class="social-links">
-            <a href="https://www.instagram.com/mlual_05/" target="_blank" rel="noopener noreferrer" class="social-link">
-              <i class="ri-instagram-line"></i>
-              <span>Instagram</span>
-            </a>
-            <a href="https://www.linkedin.com/in/manuel-luna-alarcón-b10779370/" target="_blank" rel="noopener noreferrer" class="social-link">
-              <i class="ri-linkedin-line"></i>
-              <span>LinkedIn</span>
-            </a>
-            <a href="https://github.com/ManuLuna05" target="_blank" rel="noopener noreferrer" class="social-link">
-              <i class="ri-github-line"></i>
-              <span>GitHub</span>
-            </a>
+
+        <div class="contact-map fade-up" style="transition-delay:.15s">
+          <div class="map-card">
+            <div class="map-header">
+              <i class="ri-map-2-line"></i>
+              <span data-lang-es="Ubicación actual" data-lang-en="Current location">Ubicación actual</span>
+            </div>
+            <div class="map-vis">
+              <div class="map-pin"></div>
+              <div class="map-loc">
+                <strong>Córdoba, España</strong>
+                <span>37.8882° N, 4.7794° W</span>
+              </div>
+            </div>
+          </div>
+
+          <div style="margin-top:1.5rem">
+            <div class="timeline-block-title" data-lang-es="Disponibilidad" data-lang-en="Availability">Disponibilidad
+            </div>
+            <div class="lang-row">
+              <div class="lang-item">
+                <span class="lang-name" data-lang-es="Trabajo remoto" data-lang-en="Remote work">Trabajo remoto</span>
+                <span class="lang-lvl" style="color:var(--accent)">Disponible</span>
+              </div>
+              <div class="lang-item">
+                <span class="lang-name" data-lang-es="Trabajo presencial"
+                  data-lang-en="On-site">Trabajo presencial</span>
+                <span class="lang-lvl" style="color:var(--accent)">Disponible</span>
+              </div>
+              <div class="lang-item">
+                <span class="lang-name" data-lang-es="Freelance / Proyecto" data-lang-en="Freelance / Project">Freelance
+                  / Proyecto</span>
+                <span class="lang-lvl" style="color:var(--accent)">Disponible</span>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Footer -->
+  <!-- FOOTER -->
   <footer class="footer">
     <div class="container">
-      <div class="footer-content">
-        <div class="footer-logo">
-          <img src="Imagenes/logo_claro.png" alt="Logo" class="logo-img logo-dark">
-          <img src="Imagenes/logo_oscuro.png" alt="Logo" class="logo-img logo-light">
-          <p data-lang-es="Este logotipo representa mis iniciales mostrando así un poco de mi capacidad creativa." data-lang-en="This logo represents my initials, showing a bit of my creative ability.">
-            Este logotipo representa mis iniciales mostrando así un poco de mi capacidad creativa.
-          </p>
+      <div class="footer-inner">
+        <div class="footer-copy">
+          © 2025 <span>Manuel Luna Alarcón</span> · Data Analyst &amp; AI Developer
         </div>
-        <div class="footer-links">
-          <h4 data-lang-es="Enlaces rápidos" data-lang-en="Quick Links">Enlaces rápidos</h4>
-          <ul>
-            <li><a href="#home" data-lang-es="Inicio" data-lang-en="Home">Inicio</a></li>
-            <li><a href="#about" data-lang-es="Sobre Mí" data-lang-en="About">Sobre Mí</a></li>
-            <li><a href="#skills" data-lang-es="Habilidades" data-lang-en="Skills">Habilidades</a></li>
-            <li><a href="#projects" data-lang-es="Proyectos" data-lang-en="Projects">Proyectos</a></li>
-            <li><a href="#contact" data-lang-es="Contacto" data-lang-en="Contact">Contacto</a></li>
-          </ul>
-        </div>
-        <div class="footer-download">
-          <h4 data-lang-es="Currículum" data-lang-en="Resume">Currículum</h4>
-          <a href="docs/MANUEL_LUNA_ALARCON_CV.pdf" download="CV_Manuel_Luna_Alarcon.pdf" class="download-btn">
-            <i class="ri-download-line"></i>
-            <span data-lang-es="Descargar CV PDF" data-lang-en="Download CV PDF">Descargar CV PDF</span>
-          </a>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <p data-lang-es="Copyright © 2025 Manuel Luna Alarcón. Todos los derechos reservados." data-lang-en="Copyright © 2025 Manuel Luna Alarcón. All rights reserved.">
-          Copyright © 2025 Manuel Luna Alarcón. Todos los derechos reservados.
-        </p>
+        <a href="docs/MANUEL_LUNA_ALARCON_CV.pdf" download class="footer-dl">
+          <i class="ri-download-2-line"></i>
+          <span data-lang-es="Descargar CV" data-lang-en="Download CV">Descargar CV</span>
+        </a>
       </div>
     </div>
   </footer>
 
   <script src="script.js"></script>
 </body>
+
 </html>
